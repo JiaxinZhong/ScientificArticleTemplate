@@ -1,0 +1,29 @@
+%% set the gemetric info for the document
+\usepackage{geometry}
+\geometry{
+	paper = a4paper, % Change to letterpaper for US letter
+	inner = 2.54cm, % Inner margin
+	outer = 2.54cm, % Outer margin
+	% bindingoffset = 0cm, % Binding offset
+	top = 2.54cm, % Top margin
+	bottom = 2.54cm, % Bottom margin
+}
+
+%% math
+\usepackage{physics}
+
+%% Set the footer
+% see https://tex.stackexchange.com/questions/227/how-can-i-add-page-of-on-my-document
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot{} % clear existing header/footer entries
+\fancyfoot[C]{Page {\thepage} of \pageref*{LastPage}}
+% note that 
+%   \thispagestyle{firststyle}
+% must be used below \maketitle
+\fancypagestyle{firststyle} 
+{
+    \fancyfoot{}
+    \fancyfoot[C]{Page {\thepage} of \pageref*{LastPage}}
+}

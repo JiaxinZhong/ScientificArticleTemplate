@@ -1,49 +1,73 @@
 \documentclass{article}
 
-\usepackage{scigeneral}
+\usepackage{sciart}
 
 % enable Chinese
 % \usepackage[UTF8]{ctex}
 
-% set the gemetric info for the document
-\usepackage{geometry}
-\geometry{
-	paper = a4paper, % Change to letterpaper for US letter
-	inner = 2.54cm, % Inner margin
-	outer = 2.54cm, % Outer margin
-	bindingoffset = 0cm, % Binding offset
-	top = 1.5cm, % Top margin
-	bottom = 1.5cm, % Bottom margin
-}
 
 % setting for levels
+\usepackage{hyperref}
 \setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{2}
 \hypersetup{
-	bookmarksopenlevel = 3
+    bookmarksopenlevel = 3,
+    citecolor = red,
+	colorlinks		=	true,
+	bookmarks		=	true,
+	bookmarksopen	=	true,
+    % bookmarksdepth  =   2,
+	pdfstartview	=	Fit,
+	pdftitle		=	{Scientific Article Template},
+	pdfauthor		=	{Jiaxin Zhong},
 }
 
-% \usepackage[style=numeric]{biblatex}
+% open book mark at arbitrary level
+\usepackage[open, numbered]{bookmark}
+% opt: numbered --- show numbers in the bookmark
 
-% \addbibresource{zotero1.bib}
+% for some dummy text
+\usepackage{lipsum}
+
+
 
 \title{Scientific Article Template}
 \author{Jiaxin Zhong}
 \date{\today}
 
-\hypersetup{
-    citecolor = red
-}
 % \usepackage{mlmodern}
 
 
 \begin{document}
 \maketitle
+\thispagestyle{firststyle}
+
 \section{Introduction}
-This is a \LaTeX{} template.
+This is a \LaTeX{} template designed for daily writing the scientific articles, e.g., progress reports, technical reports, technical notes.
+
+
+\lipsum[1]
+
+\lipsum[2]
+
+\lipsum[3]
+
+\lipsum[4]
+
+\lipsum[5]
+
+\lipsum[6]
+
+\section{Equations}
+Equation~(\ref{eq:29jf2}) is an example of the labelled equation.
+\begin{equation}
+    f(x) = \int_0^x t\sin t \dd t
+    \label{eq:29jf2}
+\end{equation}
 
 \section{Citations}
 References: \cite{Zhong2020InsertionLossThin}
+
 
 
 \addcontentsline{toc}{section}{References}
