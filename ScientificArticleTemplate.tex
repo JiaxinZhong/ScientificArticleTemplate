@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\usepackage{scigeneral}
+
+% enable Chinese
+% \usepackage[UTF8]{ctex}
+
+% set the gemetric info for the document
+\usepackage{geometry}
+\geometry{
+	paper = a4paper, % Change to letterpaper for US letter
+	inner = 2.54cm, % Inner margin
+	outer = 2.54cm, % Outer margin
+	bindingoffset = 0cm, % Binding offset
+	top = 1.5cm, % Top margin
+	bottom = 1.5cm, % Bottom margin
+}
+
+% setting for levels
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\hypersetup{
+	bookmarksopenlevel = 3
+}
+
+% \usepackage[style=numeric]{biblatex}
+
+% \addbibresource{zotero1.bib}
+
+\title{Scientific Article Template}
+\author{Jiaxin Zhong}
+\date{\today}
+
+\hypersetup{
+    citecolor = red
+}
+% \usepackage{mlmodern}
+
+
+\begin{document}
+\maketitle
+\section{Introduction}
+This is a \LaTeX{} template.
+
+\section{Citations}
+References: \cite{Zhong2020InsertionLossThin}
+
+
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{plain}
+\bibliography{zotero}
+
+\end{document}
+
